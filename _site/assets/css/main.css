@@ -241,7 +241,7 @@ sup a[rel="footnote"] {
 
 #masthead {
 	padding: 15px 0;
-	background: none repeat scroll 0% 0% #222;
+	background: none repeat scroll 0% 0% #2d084f;
 	color: #fff;
 }
 
@@ -354,9 +354,9 @@ ul#pagenav li a.adn {
   height: 34px;
   display: none;
   margin: 0 auto 35px;
-  margin-top: 10px;
+  margin-top: 250px;
   list-style: none;
-} 
+}
 
 .social-links li {
   float: left;
@@ -720,7 +720,7 @@ figcaption {
 		width: 230px;
 		display: block;
 		color: rgba(255, 255, 255, 0.7);
-		padding: 0 0 10px;
+		padding: 0 0 35px;
 		margin: 0 auto !important;
 		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 	}
