@@ -720,9 +720,9 @@ figcaption {
 		width: 230px;
 		display: block;
 		color: rgba(255, 255, 255, 0.7);
-		padding: 0 0 10px;
+		padding: 0 0 25px;
 		margin: 0 auto !important;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		border-bottom: 2px solid rgba(255, 255, 255, 0.2);
 	}
 
 	h1.sitetitle, h2.sitetitle, .description {
