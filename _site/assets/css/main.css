@@ -427,9 +427,8 @@ h1.sitetitle, h2.sitetitle {
 }
 
 .sitetitle {
-	font-size: 36px;
+	font-size: 40px;
 	font-family: 'ChunkFive', Helvetica, sans-serif;
-	text-transform: lowercase;
 	font-weight: 100;
 	display: block;
 	border: none;
