@@ -46,10 +46,7 @@ $(function(){
 
   // --- Responsive Menu --- //
 
-  var header = $("#masthead"),
-      menu = $("ul#pagenav"),
-      social = $('.social-links'),
-      menuButton = $("<div class='menubutton'><a href='#'><span></span><span></span><span></span></a></div>");
+  
 
   menuButton.click(showMenu);
   header.append(menuButton);
