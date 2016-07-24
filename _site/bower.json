@@ -1,0 +1,10 @@
+{
+  "name": "iago-portifolio",
+  "version": "0.0.0",
+  "authors": [
+    "Iago Velasco<iago@iago.com>"
+  ],
+  "dependencies": {
+    "waypoints": "~4.0.0"
+  }
+}
