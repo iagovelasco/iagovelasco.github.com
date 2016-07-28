@@ -1,6 +1,18 @@
+
+
 $(function () {
+    sticky();
     map();
+    utils();
+    contato();
 });
+
+function sticky() {
+
+    $(".header").sticky();
+
+}
+
 
 
 function map() {
@@ -35,4 +47,34 @@ function map() {
             content: '<p>Rua Oiti, 200 -Água Rasa</p></br><p> São Paulo - SP - CEP 03347-000</p>'
         }
     });
+}
+
+function utils(){
+
+       $('.scroll-to, #navigation a').click(function (event) {
+        event.preventDefault();
+        var full_url = this.href;
+        var parts = full_url.split("#");
+        var trgt = parts[1];
+
+        $('body').scrollTo($('#' + trgt), 800, {offset: -50});
+
+    });
+
+}
+
+function contato(){
+
+    $('#contact-form-holder').addClass('form-hidden');
+    $('.contact-form-trigger').click(function() {
+        if($('#contact-form-holder').hasClass('form-hidden')) {
+            $('#contact-form-holder').removeClass('form-hidden').addClass('form-visible');
+            $('.contact-form-trigger').addClass('active');
+        } else
+        if($('#contact-form-holder').hasClass('form-visible')) {
+            $('#contact-form-holder').removeClass('form-visible').addClass('form-hidden');
+            $('.contact-form-trigger').removeClass('active');
+        };
+    });
+
 }

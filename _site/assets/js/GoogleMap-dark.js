@@ -1,10 +1,10 @@
 $(document).ready(function (){
-		
+
 	/* Google Map
 	-----------------------------------------------------*/
-	
+
 	function mapInitialize() {
-		
+
 	var mapDark =  [
 				  {
 					  "stylers": [
@@ -35,7 +35,7 @@ $(document).ready(function (){
 					  ]
 				  }
 			  ];
-			  
+
 	  var mapLight =  [
 				  {
 					  "featureType": "landscape",
@@ -120,10 +120,10 @@ $(document).ready(function (){
 					  ]
 				  }
 			  ]
-				  
-	  var yourLatitude = 40.758895;
-	  var yourLongitude = -73.985131;
-	  
+
+	  var yourLatitude = -23.5608002;
+	  var yourLongitude = -46.5683473;
+
 	  var myOptions = {
 		zoom: 14,
 		center: new google.maps.LatLng(yourLatitude,yourLongitude-0.01),
@@ -135,19 +135,19 @@ $(document).ready(function (){
 		streetViewControl: false,
 		styles: mapDark
 	  };
-	  
+
 	  var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
-	  
-	  var image = 'images/my-location.png';
+
+	  var image = '/assets/images/marker.png';
 	  var myLatLng = new google.maps.LatLng(yourLatitude,yourLongitude);
 	  var myLocation = new google.maps.Marker({
 		  position: myLatLng,
 		  map: map,
 		  icon: image
 	  });
-	
+
 	}
-	
+
 	google.maps.event.addDomListener(window, 'load', mapInitialize);
-	
+
 });

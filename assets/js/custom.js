@@ -149,11 +149,11 @@ $(document).ready(function (){
 	var toLoad;
 	
 	function showNewContent() {
-	   $('.project-content').slideUp(700, function () { $('.project-content').slideDown(700, function () { $.waypoints('refresh') }); });
+	    $('.project-content').slideUp(700, function () { $('.project-content').slideDown(700, function () { $.waypoints('refresh') }); });
 	}
 	
     function loadContent() {　
-	   $('.project-content').load(toLoad,showNewContent());
+	     $('.project-content').load(toLoad,showNewContent());
 　 }
 	
 	$('.ajax-portfolio-link').click(function() {
