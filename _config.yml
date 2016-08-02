@@ -6,12 +6,12 @@
 # 'jekyll serve'. If you change this file, please restart the server process.
 
 # Site settings
-title: Agência - SO+
-email: contato@agenciasomais.com.br
+title: Iago Velasco | Full stack
+email: iagovelasco@hotmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Programador apaixonado por linhas de código e que respira tecnologia
+  Tenho 23 anos, brasileiro, graduado em Ciências da Computação,
+  sou desenvolvedor Front-End e Back-End
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://iagovelasco.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
