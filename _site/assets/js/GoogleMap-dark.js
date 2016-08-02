@@ -121,8 +121,8 @@ $(document).ready(function (){
 				  }
 			  ]
 
-	  var yourLatitude = -23.5608002;
-	  var yourLongitude = -46.5683473;
+	  var yourLatitude = 38.738138;
+	  var yourLongitude = -77.227127;
 
 	  var myOptions = {
 		zoom: 14,
@@ -138,7 +138,7 @@ $(document).ready(function (){
 
 	  var map = new google.maps.Map(document.getElementById('google-map'), myOptions);
 
-	  var image = '/assets/images/marker.png';
+	  var image = 'images/my-location.png';
 	  var myLatLng = new google.maps.LatLng(yourLatitude,yourLongitude);
 	  var myLocation = new google.maps.Marker({
 		  position: myLatLng,
