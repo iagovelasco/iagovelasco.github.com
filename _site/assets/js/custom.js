@@ -305,7 +305,7 @@ $(document).ready(function (){
         if ($contactForm.valid()){
             $.ajax({
                 type: "POST",
-                url: "php/contact-form.php",
+                url: "/assets/php/contact-form.php",
                 data: $(this).serialize(),
                 success: function(msg) {
                     if (msg === 'SEND') {
