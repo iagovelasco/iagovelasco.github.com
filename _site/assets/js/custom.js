@@ -347,7 +347,7 @@ $(document).ready(function (){
         $('#alert')
           .removeClass('alert-danger')
           .addClass('alert-success')
-          .text('Obrigado! Recebi a sua mensagem!')
+          .text('Obrigado! Recebemos a sua mensagem!')
           .show();
       },
       error: function() {

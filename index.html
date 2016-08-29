@@ -372,15 +372,15 @@ layout: default
           <div  class="row">
           
             <div class="col-lg-12">
-            --> 
+            
                 
               <!-- Post Carousel --> 
-              <!-- 
-              <div class="post-carousel animated slide-in-top">
-               --> 
+              
+             <!-- <div class="post-carousel animated slide-in-top">-->
+                
                 <!-- Comentario Single Post -->
-                <!--
-                <article class="post post-carousel-item">
+                
+                <!--<article class="post post-carousel-item">
                     <div class="post-image"><img src="/assets/images/blog/post_01.jpg" alt="" /></div>
                     <div class="post-content-holder">
                         <div class="post-content">
@@ -399,7 +399,16 @@ layout: default
                             </div>
                         </div>
                     </div>
-                </article>-->
+                </article>
+
+                {% for post in site.posts %}
+              {% unless post.alias %}
+               <article class="article"{% if forloop.index > 30 %} data-sr{% endif %}>
+                <h1><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" rel="me">{{ post.title }}</a></h1>
+                <p class="hidden-phone">{{ post.description }}</p>
+                </article>
+                {% endunless %}
+                {% endfor %}
                 <!-- Comentario Single Post -->
                 <!--
                 <article class="post post-carousel-item">
@@ -551,8 +560,8 @@ layout: default
                 </div>
                  -->
                 <!--Comentario Post Carousel Navigation -->  
-                <!--
-                <div class="post-carousel-control">
+                
+               <!-- <div class="post-carousel-control">
                   <a class="post-carousel-prev" href="#">Previous</a>
                   <a class="post-carousel-next" href="#">Next</a>
                 </div>
@@ -565,8 +574,8 @@ layout: default
             
         </div>
         
-    </section>
-    -->
+    </section> -->
+
     <!-- Blog / End -->
     
     <!-- Contact -->
