@@ -349,6 +349,10 @@ $(document).ready(function (){
           .addClass('alert-success')
           .text('Obrigado! Recebemos a sua mensagem!')
           .show();
+
+           $(form).find('input[name="name"]').val(""),
+           $(form).find('input[name="email"]').val(""),
+           $(form).find('textarea[name="message"]').val("")
       },
       error: function() {
         $('#alert')
@@ -356,6 +360,10 @@ $(document).ready(function (){
           .addClass('alert-danger')
           .text('Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde!')
           .show();
+
+           $(form).find('input[name="name"]').val(""),
+           $(form).find('input[name="email"]').val(""),
+           $(form).find('textarea[name="message"]').val("")
       },
       complete: function() {
         form.reset();
