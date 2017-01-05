@@ -370,7 +370,7 @@ layout: default
     <!-- Portfjolo / End -->
     
     <!--Comentario Blog -->
-    <!--
+    
     <section id="blog">
     
       <div class="content padded">
@@ -382,39 +382,35 @@ layout: default
                 
               <!-- Post Carousel --> 
               
-             <!-- <div class="post-carousel animated slide-in-top">-->
+             <div class="post-carousel animated slide-in-top">
                 
                 <!-- Comentario Single Post -->
-                
-                <!--<article class="post post-carousel-item">
+               {% for post in site.posts %}
+               <article class="post post-carousel-item">
                     <div class="post-image"><img src="/assets/images/blog/post_01.jpg" alt="" /></div>
                     <div class="post-content-holder">
                         <div class="post-content">
                             <div class="post-info clearfix">
-                                <span class="post-date">22 May, 2014</span>
-                                <div class="post-meta">
-                                    <span><i class="fa fa-comment"></i><a href="#">4 comments</a></span>
-                                    <span><i class="fa fa-tag"></i><a href="#">Webdesign</a></span>
-                                </div>
+                                <span class="post-date">{{ post.date | date: ' %d %b %Y' }}</span>        
                             </div>
                             <div class="post-text">
-                                <h3><a href="single-post-extra.html">Awesome Seattle Cycle Trip</a></h3>
-                                <p class="lead">Per sint eirmod expetenda te. Pro ne essent.</p>
-                                <p>Per ea tibique fabellas electram. Ea aliquam corpora vis. Ne quot civibus atomorum quo. </p>
-                                <a href="single-post-extra.html" class="btn btn-primary btn-sm">Read more</a>
+                                <h3><a>{{ post.title }}</a></h3>
+                                <p class="lead">{{ post.description }}</p>
+                                <a href="{{ post.url }}" class="btn btn-primary btn-sm">Read more</a>
                             </div>
                         </div>
                     </div>
                 </article>
-
+                 {% endfor %}
+                
+          
+           <!-- <ul>
                 {% for post in site.posts %}
-              {% unless post.alias %}
-               <article class="article"{% if forloop.index > 30 %} data-sr{% endif %}>
-                <h1><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}" rel="me">{{ post.title }}</a></h1>
-                <p class="hidden-phone">{{ post.description }}</p>
-                </article>
-                {% endunless %}
-                {% endfor %}
+                 <li>
+            <span class="date">{{ post.date | date: '%Y %b %d' }}</span> - <a href="{{ post.url }}">{{ post.description }}</a>
+        </li>
+        {% endfor %}
+    </ul>
                 <!-- Comentario Single Post -->
                 <!--
                 <article class="post post-carousel-item">
@@ -567,7 +563,7 @@ layout: default
                  -->
                 <!--Comentario Post Carousel Navigation -->  
                 
-               <!-- <div class="post-carousel-control">
+               <div class="post-carousel-control">
                   <a class="post-carousel-prev" href="#">Previous</a>
                   <a class="post-carousel-next" href="#">Next</a>
                 </div>
@@ -580,7 +576,7 @@ layout: default
             
         </div>
         
-    </section> -->
+    </section> 
 
     <!-- Blog / End -->
     
