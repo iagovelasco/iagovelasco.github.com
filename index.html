@@ -387,7 +387,7 @@ layout: default
                 <!-- Comentario Single Post -->
                {% for post in site.posts %}
                <article class="post post-carousel-item">
-                    <div class="post-image"><img src="/assets/images/blog/post_01.jpg" alt="" /></div>
+                    <div class="post-image"><img src="{{ post.image }}" alt="" /></div>
                     <div class="post-content-holder">
                         <div class="post-content">
                             <div class="post-info clearfix">
@@ -396,7 +396,7 @@ layout: default
                             <div class="post-text">
                                 <h3><a>{{ post.title }}</a></h3>
                                 <p class="lead">{{ post.description }}</p>
-                                <a href="{{ post.url }}" class="btn btn-primary btn-sm">Read more</a>
+                                <a href="{{ post.url }}" class="btn btn-primary btn-sm">Leia Mais</a>
                             </div>
                         </div>
                     </div>
