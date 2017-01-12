@@ -16,6 +16,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://iagovelasco.com.br" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  jekyll
+fbcomments: yes
 
 # Build settings
 markdown: kramdown
