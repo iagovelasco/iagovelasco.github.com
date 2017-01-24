@@ -37,9 +37,20 @@
 	}
 
 	p {
-		line-height: 22px;
-		margin-bottom: 25px;
+		 margin: 0 0 1.625rem;
+    	font-size: 20px;
+    	font-size: 2rem;
+    	line-height: 1.3px;
+    	line-height: 30px;
+
 	}
+
+	p-page{
+ 		margin: 0 0 1.625rem;
+    	font-size: 20px;
+    	font-size: 1.25rem;
+    	line-height: 1.3px;
+    	line-height: 30px;	}
 
 	strong {
 		font-weight: none;
