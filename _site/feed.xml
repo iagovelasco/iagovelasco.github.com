@@ -4,11 +4,37 @@
     <title>Iago Velasco | Full stack</title>
     <description>Programador apaixonado por linhas de código e que respira tecnologia Tenho 23 anos, brasileiro, graduado em Ciências da Computação, sou desenvolvedor Front-End e Back-End
 </description>
-    <link>http://iagovelasco.com.br/</link>
-    <atom:link href="http://iagovelasco.com.br/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 03 Jan 2017 22:06:18 -0200</pubDate>
-    <lastBuildDate>Tue, 03 Jan 2017 22:06:18 -0200</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 24 Jan 2017 13:08:31 -0200</pubDate>
+    <lastBuildDate>Tue, 24 Jan 2017 13:08:31 -0200</lastBuildDate>
+    <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Hello World</title>
+        <description>&lt;p&gt;Primeiramente seja bem-vindo ao meu blog.&lt;/p&gt;
+
+&lt;p&gt;Meu nome é Iago Velasco, sou desenvolvedor Full-Stack.&lt;/p&gt;
+
+&lt;p&gt;Sou apaixonado por programação e tecnologia, estou inicando o blog para me incentivar a aprender coisas
+novas e com tudo passar conhecimento para outras pessoas.&lt;/p&gt;
+
+&lt;p&gt;Neste blog a maioria dos assuntos será relacionado a programação e coisas para ajudar no seu dia-a-dia, 
+se algum assuntno chamar atenção, relacionado a metas de vida, empreendedorismo, com certeza irei postar.&lt;/p&gt;
+
+&lt;p&gt;Sinta-se a vontade para me procurar ou até mesmo sugerir algo,&lt;/p&gt;
+
+&lt;p&gt;Abs&lt;/p&gt;
+
+&lt;h4 id=&quot;iago-velasco&quot;&gt;Iago Velasco&lt;/h4&gt;
+
+</description>
+        <pubDate>Tue, 24 Jan 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2017/01/24/hello-world.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/24/hello-world.html</guid>
+        
+        
+      </item>
     
   </channel>
 </rss>
