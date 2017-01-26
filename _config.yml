@@ -12,7 +12,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Programador apaixonado por linhas de código e que respira tecnologia
   Tenho 23 anos, brasileiro, graduado em Ciências da Computação,
   sou desenvolvedor Front-End e Back-End
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "http://iagovelasco.com.br" # the subpath of your site, e.g. /blog
 url: "http://iagovelasco.com.br" # the base hostname & protocol for your site
 enforce_ssl:      iagovelasco.com.br
 twitter_username: iagovelasco1
