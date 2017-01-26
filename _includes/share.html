@@ -5,7 +5,7 @@
   {% capture canonical %}{{ site.fullurl }}{% if site.permalink contains '.html' %}{{ page.url }}{% elsif site.permalink contains category_dir %}{{ '/' | page.url | remove:'index.html' | '/' }}{% else %}{{ page.url | remove:'index.html' | '/' }}{% endif %}{% endcapture %}
   <!-- Share Twitter -->
   <span>
-    <i class="fa fa-twitter"></i> <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&amp;text={% if page.title %}{{ page.title | escape | truncate:100 | replace:' ','%20' }}{% else %}{{ site.title | escape | truncate:100 | replace:' ','%20' }}{% endif %}&amp;via={{ site.owner.twitter }}" title="Share on Twitter" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">twitter</a>
+    <i class="fa fa-twitter"></i> <a href="https://twitter.com/intent/tweet?url={{ site.url }}{{ page.url }}&amp;text={% if page.title %}{{ page.title | escape | truncate:100 | replace:' ','%20' }}{% else %}{{ site.title | escape | truncate:100 | replace:' ','%20' }}{% endif %}&amp; title="Share on Twitter" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">twitter</a>
   </span>
 
   <!-- Share Facebook -->
