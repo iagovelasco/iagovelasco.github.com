@@ -28,7 +28,7 @@ Depois de cadastrado seguir o tutorial do próprio github para fazer o download 
 
 <a href="https://help.github.com/articles/set-up-git/">https://help.github.com/articles/set-up-git/</a>
 
-Agora que esta tudo pronto, podemos comecar a FORKAR um projeto e contribuir. Mas atens disso precisamos saber dois conceitos que é o Fork e o Pull
+Agora que esta tudo pronto, podemos comecar a FORKAR um projeto e contribuir. Mas antes disso precisamos saber dois conceitos que é o Fork e o Pull
 
 #### Fork
 

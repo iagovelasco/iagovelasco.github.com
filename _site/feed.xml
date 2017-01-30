@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Jan 2017 19:41:03 -0200</pubDate>
-    <lastBuildDate>Mon, 30 Jan 2017 19:41:03 -0200</lastBuildDate>
+    <pubDate>Mon, 30 Jan 2017 19:43:28 -0200</pubDate>
+    <lastBuildDate>Mon, 30 Jan 2017 19:43:28 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -35,7 +35,7 @@ Dependendo da licença usada, ao baixar o fonte, o usuário ganha o direito de u
 
 &lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/set-up-git/&quot;&gt;https://help.github.com/articles/set-up-git/&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Agora que esta tudo pronto, podemos comecar a FORKAR um projeto e contribuir. Mas atens disso precisamos saber dois conceitos que é o Fork e o Pull&lt;/p&gt;
+&lt;p&gt;Agora que esta tudo pronto, podemos comecar a FORKAR um projeto e contribuir. Mas antes disso precisamos saber dois conceitos que é o Fork e o Pull&lt;/p&gt;
 
 &lt;h4 id=&quot;fork&quot;&gt;Fork&lt;/h4&gt;
 
