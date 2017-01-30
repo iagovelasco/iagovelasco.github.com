@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+<!-- Title -->
+<title>Contribuindo no GitHub</title>
+
+<!-- Meta -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta property="fb:app_id"       content="1167903699984343" />
+<meta name="author" content="Iago Velasco">
+
+<!-- Retina Images -->
+<script>if((window.devicePixelRatio===undefined?1:window.devicePixelRatio)>1)
+    document.cookie='HTTP_IS_RETINA=1;path=/';</script>
+<!-- End Retina Images -->
+
+<!--Google Analytics-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82206807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Google Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,700,500' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/animations.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/flaticon.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/assets/colors/orange.css" id="colors" />
+
+</head>
+
+<body>
+	<!-- Page Title -->
+	
+	<div class="page-title bottom-padded black">	
+        <!-- Page Title Background -->
+    	<div class="page-title-bg editable-alpha" data-alpha="20"><img src="/assets/images/blog/github.png" alt="" /></div>
+        <div class="content padded dark">
+          <!-- Top Bar -->
+          <div class="top-bar">
+            <!-- Go Back -->
+            <div class="pull-left">
+                <a href="/" class="btn btn-default btn-pull-up"><i class="icon-before fa fa-chevron-left"></i>Site</a>
+            </div>
+            <!-- Heading -->
+         		<div class="post-carousel-control">
+             
+                	  <a class="post-carousel-prev" href="/2017/01/24/hello-world.html">Previous</a>
+              
+               
+                </div>
+          </div>
+          
+          <!-- Page Title Content -->
+          <div class="padded-vertical">
+          	<span class="post-date-alt">30/01/2017</span>
+            <h1 class="medium">Contribuindo no GitHub</h1>
+            <div class="post-meta pull-left">
+           
+                <span><i class="fa fa-tag"></i><a href="#">Contribuindo em projetos open source com github</a></span>
+            </div>
+          </div>
+        </div> 
+    </div>
+     
+    <!-- Page Content -->
+    <div class="container content">
+    
+      <div class="row">
+      
+      	<div class="col-lg-12">
+        	<p class="lead"> </p>
+    		<h3 id="projetos-open-source">Projetos Open source</h3>
+
+<h4 id="o-que-é-">O que é ?</h4>
+
+<p>Projetos Open Source são aqueles com a finalidade de criar e manter softwares que incluem o código fonte para seus usuários.</p>
+
+<p>Ter o código fonte aberto significa que as pessoas podem estudá-lo e muitas vezes incrementá-lo com algo que o software poderia ou deveria fazer.
+Dependendo da licença usada, ao baixar o fonte, o usuário ganha o direito de usá-lo como quiser.</p>
+
+<p>Uma das principais ferramentas para projetos open source é o <a href="http://github.com">Github</a></p>
+
+<h4 id="como-contribuir-com-a-comunidade-atraves-do-github">Como contribuir com a comunidade atraves do Github?</h4>
+
+<p>Primeiramente você deverá se cadastrar no site do github.</p>
+
+<p><a href="https://github.com/join?source=header-home">https://github.com/join?source=header-home</a></p>
+
+<p><img src="/assets/images/blog/post-git/createCount.png" /></p>
+
+<p>Depois de cadastrado seguir o tutorial do próprio github para fazer o download na sua máquina e configurar o mesmo, segue o link abaixo:</p>
+
+<p><a href="https://help.github.com/articles/set-up-git/">https://help.github.com/articles/set-up-git/</a></p>
+
+<p>Agora que esta tudo pronto, podemos comecar a FORKAR um projeto e contribuir. Mas atens disso precisamos saber dois conceitos que é o Fork e o Pull</p>
+
+<h4 id="fork">Fork</h4>
+
+<p>Fork é uma cópia de um repositório, adicionando o repositório copiado para os nossos repositórios.</p>
+
+<p>Por exemplo: vimos que no site <a href="http://iagovelasco.com.br">http://www.iagovelasco.com.br</a> tem algum problema e queremos corrigir, então vamos no repositório e damos um fork.</p>
+
+<p><img src="/assets/images/blog/post-git/dandoFork.png" /></p>
+
+<p>E logo aparecera ele “Forkando”</p>
+
+<p><img src="/assets/images/blog/post-git/Forkando.png" /></p>
+
+<p>Agora podemos trabalhar neste repositório pois ele ja esta em nosso repositório</p>
+
+<p><img src="/assets/images/blog/post-git/repositorioFork.png" /></p>
+
+<p>Como vimos este é o primeiro passo para contribuir em um projeto open source.</p>
+
+<h4 id="git-clone">Git clone</h4>
+
+<p>Para fazer suas alterações no projeto que demos fork, devemos fazer um git clone –repositório para que ele faça o download para nosso local.</p>
+
+<p>Então acesse o terminal e digite como no exemplo abaixo:</p>
+
+<p><img src="/assets/images/blog/post-git/terminalClone.png" /></p>
+
+<p>Depois que fazer a alteração temos que fazer o commit para “subir” a alteração, seguindo os três comandos:</p>
+
+<p><img src="/assets/images/blog/post-git/gitadd.png" />
+<img src="/assets/images/blog/post-git/gitcommit.png" />
+<img src="/assets/images/blog/post-git/gitpush.png" /></p>
+
+<p>Pronto !! Sua contribuição está quase pronta.</p>
+
+<h4 id="pull-request">Pull Request</h4>
+
+<p>O pull request consiste em uma solicitação de integração das nossas modificações com o repositório que realizamos um fork.</p>
+
+<p>Para realizar um pull request devemos ir até o repositório gerado pela operação de fork (na nossa base de repositórios). Lá, encontraremos um botão chamado ‘pull request’:</p>
+
+<p><img src="/assets/images/blog/post-git/pullrequest.png" /></p>
+
+<p>Pronto sua contribuição está submetida, agora só esperar o dono do projeto aprovar a sua modificação, alteração, etc.</p>
+
+<h4 id="agora-é-sua-vez">Agora é sua vez.</h4>
+
+<p>Siga os passo e contribua para aprender no repositório:</p>
+
+<p><a href="https://github.com/iagovelasco/primeiraContribuicao">https://github.com/iagovelasco/primeiraContribuicao</a></p>
+
+<h4 id="lembrando">Lembrando:</h4>
+
+<p>1 - Fazer o Fork</p>
+
+<p>2 - Git Clone</p>
+
+<p>3 - Commit</p>
+
+<p>4 - Pull Request</p>
+
+<p>Vou sempre aceitar os pull request que vocês fizerem.</p>
+
+<p>Mandem seus Requests.</p>
+
+<p>Abs</p>
+
+<h4 id="iago-velasco">Iago Velasco</h4>
+
+
+	
+
+<!--Share-->
+ 
+<hr>
+<p>Compartilhe:</p>
+<ul class="social-icons">
+  
+  <!-- Share Twitter -->
+  <span>
+    <i class="fa fa-twitter"></i> <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/2017/01/30/contribuindo-no-github.html&amp;text=Contribuindo%20no%20GitHub&amp; title="Share on Twitter" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">twitter</a>
+  </span>
+
+  <!-- Share Facebook -->
+  <span>
+    <i class="fa fa-facebook"></i> <a href="https://www.facebook.com/sharer.php?&amp;url=http://localhost:4000&amp;text=Contribuindo%20no%20GitHub&amp;  title="Share on Facebook" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">facebook</a>
+  </span>
+
+  <!-- Share LinkedIn -->
+  <span>
+    <i class="fa fa-linkedin"></i> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/2017/01/30/contribuindo-no-github.html" title="Share on Linkedin" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">linkedin</a>
+  </span>
+</div>
+
+
+<!-- Javascript for Facebook Comment-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=1167903699984343";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="fb-comments" data-href="http://iagovelasco.com.br/2017/01/30/contribuindo-no-github.html" data-numposts="5"></div>
+
+  
+
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/page-loader.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/assets/js/waypoints.min.js"></script>
+<script type="text/javascript" src="/assets/js/owl.carousel.min.js"></script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQQ_Pt1-ePzVj_KY-ucm7xbukiHWu5aMU" type="text/javascript"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+<script type="text/javascript" src="/assets/js/GoogleMap-light.js"></script>
+
+</body>
+
+</html>
+

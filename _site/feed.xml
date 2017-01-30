@@ -6,9 +6,112 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 26 Jan 2017 21:24:52 -0200</pubDate>
-    <lastBuildDate>Thu, 26 Jan 2017 21:24:52 -0200</lastBuildDate>
+    <pubDate>Mon, 30 Jan 2017 16:58:02 -0200</pubDate>
+    <lastBuildDate>Mon, 30 Jan 2017 16:58:02 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Contribuindo no GitHub</title>
+        <description>&lt;h3 id=&quot;projetos-open-source&quot;&gt;Projetos Open source&lt;/h3&gt;
+
+&lt;h4 id=&quot;o-que-é-&quot;&gt;O que é ?&lt;/h4&gt;
+
+&lt;p&gt;Projetos Open Source são aqueles com a finalidade de criar e manter softwares que incluem o código fonte para seus usuários.&lt;/p&gt;
+
+&lt;p&gt;Ter o código fonte aberto significa que as pessoas podem estudá-lo e muitas vezes incrementá-lo com algo que o software poderia ou deveria fazer.
+Dependendo da licença usada, ao baixar o fonte, o usuário ganha o direito de usá-lo como quiser.&lt;/p&gt;
+
+&lt;p&gt;Uma das principais ferramentas para projetos open source é o &lt;a href=&quot;http://github.com&quot;&gt;Github&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;como-contribuir-com-a-comunidade-atraves-do-github&quot;&gt;Como contribuir com a comunidade atraves do Github?&lt;/h4&gt;
+
+&lt;p&gt;Primeiramente você deverá se cadastrar no site do github.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/join?source=header-home&quot;&gt;https://github.com/join?source=header-home&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/createCount.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Depois de cadastrado seguir o tutorial do próprio github para fazer o download na sua máquina e configurar o mesmo, segue o link abaixo:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://help.github.com/articles/set-up-git/&quot;&gt;https://help.github.com/articles/set-up-git/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora que esta tudo pronto, podemos comecar a FORKAR um projeto e contribuir. Mas atens disso precisamos saber dois conceitos que é o Fork e o Pull&lt;/p&gt;
+
+&lt;h4 id=&quot;fork&quot;&gt;Fork&lt;/h4&gt;
+
+&lt;p&gt;Fork é uma cópia de um repositório, adicionando o repositório copiado para os nossos repositórios.&lt;/p&gt;
+
+&lt;p&gt;Por exemplo: vimos que no site &lt;a href=&quot;http://iagovelasco.com.br&quot;&gt;http://www.iagovelasco.com.br&lt;/a&gt; tem algum problema e queremos corrigir, então vamos no repositório e damos um fork.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/dandoFork.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;E logo aparecera ele “Forkando”&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/Forkando.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora podemos trabalhar neste repositório pois ele ja esta em nosso repositório&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/repositorioFork.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como vimos este é o primeiro passo para contribuir em um projeto open source.&lt;/p&gt;
+
+&lt;h4 id=&quot;git-clone&quot;&gt;Git clone&lt;/h4&gt;
+
+&lt;p&gt;Para fazer suas alterações no projeto que demos fork, devemos fazer um git clone –repositório para que ele faça o download para nosso local.&lt;/p&gt;
+
+&lt;p&gt;Então acesse o terminal e digite como no exemplo abaixo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/terminalClone.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Depois que fazer a alteração temos que fazer o commit para “subir” a alteração, seguindo os três comandos:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/gitadd.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/blog/post-git/gitcommit.png&quot; /&gt;
+&lt;img src=&quot;/assets/images/blog/post-git/gitpush.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pronto !! Sua contribuição está quase pronta.&lt;/p&gt;
+
+&lt;h4 id=&quot;pull-request&quot;&gt;Pull Request&lt;/h4&gt;
+
+&lt;p&gt;O pull request consiste em uma solicitação de integração das nossas modificações com o repositório que realizamos um fork.&lt;/p&gt;
+
+&lt;p&gt;Para realizar um pull request devemos ir até o repositório gerado pela operação de fork (na nossa base de repositórios). Lá, encontraremos um botão chamado ‘pull request’:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/pullrequest.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Pronto sua contribuição está submetida, agora só esperar o dono do projeto aprovar a sua modificação, alteração, etc.&lt;/p&gt;
+
+&lt;h4 id=&quot;agora-é-sua-vez&quot;&gt;Agora é sua vez.&lt;/h4&gt;
+
+&lt;p&gt;Siga os passo e contribua para aprender no repositório:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/iagovelasco/primeiraContribuicao&quot;&gt;https://github.com/iagovelasco/primeiraContribuicao&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;lembrando&quot;&gt;Lembrando:&lt;/h4&gt;
+
+&lt;p&gt;1 - Fazer o Fork&lt;/p&gt;
+
+&lt;p&gt;2 - Git Clone&lt;/p&gt;
+
+&lt;p&gt;3 - Commit&lt;/p&gt;
+
+&lt;p&gt;4 - Pull Request&lt;/p&gt;
+
+&lt;p&gt;Vou sempre aceitar os pull request que vocês fizerem.&lt;/p&gt;
+
+&lt;p&gt;Mandem seus Requests.&lt;/p&gt;
+
+&lt;p&gt;Abs&lt;/p&gt;
+
+&lt;h4 id=&quot;iago-velasco&quot;&gt;Iago Velasco&lt;/h4&gt;
+
+</description>
+        <pubDate>Mon, 30 Jan 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2017/01/30/contribuindo-no-github.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/01/30/contribuindo-no-github.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Hello World</title>
