@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 Jan 2017 19:43:28 -0200</pubDate>
-    <lastBuildDate>Mon, 30 Jan 2017 19:43:28 -0200</lastBuildDate>
+    <pubDate>Mon, 30 Jan 2017 19:50:29 -0200</pubDate>
+    <lastBuildDate>Mon, 30 Jan 2017 19:50:29 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
     
       <item>
@@ -61,13 +61,13 @@ Dependendo da licença usada, ao baixar o fonte, o usuário ganha o direito de u
 
 &lt;p&gt;Então acesse o terminal e digite como no exemplo abaixo:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/terminalClone.png&quot; /&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/intellectus2017/iagovelasco.github.com&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Depois que fazer a alteração temos que fazer o commit para “subir” a alteração, seguindo os três comandos:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-git/gitadd.png&quot; /&gt;
-&lt;img src=&quot;/assets/images/blog/post-git/gitcommit.png&quot; /&gt;
-&lt;img src=&quot;/assets/images/blog/post-git/gitpush.png&quot; /&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git add --all 
+git commit -m &lt;span class=&quot;s2&quot;&gt;&quot;Comentario&quot;&lt;/span&gt;
+git push&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Pronto !! Sua contribuição está quase pronta.&lt;/p&gt;
 

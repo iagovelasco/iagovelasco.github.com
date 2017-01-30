@@ -54,13 +54,17 @@ Para fazer suas alterações no projeto que demos fork, devemos fazer um git clo
 
 Então acesse o terminal e digite como no exemplo abaixo:
 
-<img src="/assets/images/blog/post-git/terminalClone.png">
+{% highlight bash %}
+git clone https://github.com/intellectus2017/iagovelasco.github.com
+{% endhighlight %}
 
 Depois que fazer a alteração temos que fazer o commit para "subir" a alteração, seguindo os três comandos:
 
-<img src="/assets/images/blog/post-git/gitadd.png">
-<img src="/assets/images/blog/post-git/gitcommit.png">
-<img src="/assets/images/blog/post-git/gitpush.png">
+{% highlight bash %}
+git add --all 
+git commit -m "Comentario"
+git push
+{% endhighlight %}
 
 Pronto !! Sua contribuição está quase pronta.
 
