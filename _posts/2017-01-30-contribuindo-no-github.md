@@ -40,7 +40,7 @@ Por exemplo: vimos que no site <a href="http://iagovelasco.com.br">http://www.ia
 
 E logo aparecera ele "Forkando"
 
-<img src="/assets/images/blog/post-git/Forkando.png">
+<img src="/assets/images/blog/post-git/forkando.png">
 
 Agora podemos trabalhar neste repositório pois ele ja esta em nosso repositório
 
