@@ -756,6 +756,22 @@
 		border-right: 1px solid #eaeaea;
 	}
 
+
+	.post-carousel-control-blog {
+		margin-top: 10px;
+		float: right;
+	}
+
+	.post-carousel-control-blog a:focus {
+		color: inherit;
+	}
+
+	.post-carousel-control-blog a:first-child {
+		margin-right: 20px;
+		padding-right: 20px;
+		border-right: 1px solid #eaeaea;
+	}
+
 	/* Slider
 	------------------------------------------- */
 
@@ -1559,6 +1575,14 @@
 		.comments-list li li {
 			margin-left: 0;
 		}
+
+		.post-carousel-control {
+			display: none;
+		}
+
+		
+
+
 
 		/* Contact */
 
