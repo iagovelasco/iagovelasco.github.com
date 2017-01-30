@@ -21,9 +21,7 @@ facebok:          iago.velasco.94
 
 fbcomments: yes
 
-links:
-  - title: Posts
-    url: /posts/
+permalink:   /:categories/:title/
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-82206807-1
