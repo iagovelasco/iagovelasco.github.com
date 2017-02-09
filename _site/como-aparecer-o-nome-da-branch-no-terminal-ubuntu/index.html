@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+<!-- Title -->
+<title>Mostrar branch no terminal Ubuntu</title>
+
+<!-- Meta -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta property="fb:app_id"       content="1167903699984343" />
+<meta name="author" content="Iago Velasco">
+
+<!-- Retina Images -->
+<script>if((window.devicePixelRatio===undefined?1:window.devicePixelRatio)>1)
+    document.cookie='HTTP_IS_RETINA=1;path=/';</script>
+<!-- End Retina Images -->
+
+<!--Google Analytics-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82206807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Google Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,700,500' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/animations.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/flaticon.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/style.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/colors/orange.css" id="colors" />
+
+</head>
+
+<body>
+	<!-- Page Title -->
+	
+	<div class="page-title bottom-padded black">	
+        <!-- Page Title Background -->
+    	<div class="page-title-bg editable-alpha" data-alpha="20"><img src="/assets/images/blog/terminal.png" alt="" /></div>
+        <div class="content padded dark">
+          <!-- Top Bar -->
+          <div class="top-bar">
+            <!-- Go Back -->
+            <div class="pull-left">
+                <a href="/" class="btn btn-default btn-pull-up"><i class="icon-before fa fa-chevron-left"></i>Site</a>
+            </div>
+            <!-- Heading -->
+         		<div class="post-carousel-control-blog">
+             
+                	  <a class="post-carousel-prev" href="/contribuindo-no-github/">Previous</a>
+              
+               
+                </div>
+          </div>
+          
+          <!-- Page Title Content -->
+          <div class="padded-vertical">
+          	<span class="post-date-alt">07/02/2017</span>
+            <h1 class="medium">Mostrar branch no terminal Ubuntu</h1>
+            <div class="post-meta pull-left">
+           
+                <span><i class="fa fa-tag"></i><a href="#">Como mostrar o nome da branch no terminal linux</a></span>
+            </div>
+          </div>
+        </div> 
+    </div>
+     
+    <!-- Page Content -->
+    <div class="container content">
+    
+      <div class="row">
+      
+      	<div class="col-lg-12">
+        	<p class="lead"> </p>
+    		<p>Github é uma das ferramentas mais importantes para os desenvolvedores hoje em dia. Uma de suas grandes caracteristicas é a branch e o merge. Sempre quando eu estou trabalhando com o git eu tenho que dar o comando git status para ver qual branch eu estou atuando, consequentemente saber qual branch estamos trabalhando é meio confuso, não só para mim, mas para diversos desenvolvedores.</p>
+
+<p>O sistema operacional que utilizo é <b>Linux</b>, então está dica serve para quem o utiliza.</p>
+
+<p>Portanto quem trabalha com o controlador de versão <b>Linux</b> provavelmente utiliza o nosso querido <b><i>Terminal</i></b>.</p>
+
+<p>E a solução para isso é fazer com que o nosso terminal exiba o nome da branch atual que estamos atuando:</p>
+
+<p><img src="/assets/images/blog/post-nomeBranch/terminal-branch.png" /></p>
+
+<h4 id="instalação">Instalação</h4>
+
+<p>Primeiramente abra o seu terminal e crie um diretório .bash e clona o o projeto a seguir:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> <span class="nv">$ </span>mkdir ~/.bash 
+ <span class="nv">$ </span><span class="nb">cd</span> ~/.bash <span class="nv">$ </span>git clone https://github.com/jimeh/git-aware-prompt.git </code></pre></figure>
+
+<p>Edite o seu ~/.bashrc e adicione o seguinte código:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">export </span><span class="nv">GITAWAREPROMPT</span><span class="o">=</span>~/.bash/git-aware-prompt
+<span class="nb">source</span> <span class="s2">"</span><span class="k">${</span><span class="nv">GITAWAREPROMPT</span><span class="k">}</span><span class="s2">/main.sh"</span>
+<span class="nb">export </span><span class="nv">PS1</span><span class="o">=</span><span class="s2">"</span><span class="se">\$</span><span class="s2">{debian_chroot:+(</span><span class="se">\$</span><span class="s2">debian_chroot)}</span><span class="se">\u</span><span class="s2">@</span><span class="se">\h</span><span class="s2">:</span><span class="se">\w</span><span class="s2"> </span><span class="se">\[</span><span class="nv">$txtcyn</span><span class="se">\]\$</span><span class="s2">git_branch</span><span class="se">\[</span><span class="nv">$txtred</span><span class="se">\]\$</span><span class="s2">git_dirty</span><span class="se">\[</span><span class="nv">$txtrst</span><span class="se">\]\$</span><span class="s2"> "</span></code></pre></figure>
+
+<p>Agora de o comando <b>cd</b> para um diretório <b>git</b> e irá aparecer o nome da branch.</p>
+
+<p>Com isso nossa vida se torna melhor sabendo qual branch que estamos atuando.</p>
+
+	
+
+<!--Share-->
+ 
+<hr>
+<p>Compartilhe:</p>
+<ul class="social-icons">
+  
+  <!-- Share Twitter -->
+  <span>
+    <i class="fa fa-twitter"></i> <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/como-aparecer-o-nome-da-branch-no-terminal-ubuntu/&amp;text=Mostrar%20branch%20no%20terminal%20Ubuntu&amp; title="Share on Twitter" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">twitter</a>
+  </span>
+
+  <!-- Share Facebook -->
+ <span>
+    <i class="fa fa-facebook"></i> <a href="https://www.facebook.com/sharer.php?&amp;u=http://localhost:4000/como-aparecer-o-nome-da-branch-no-terminal-ubuntu/" title="Share on Facebook" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">facebook</a>
+  </span>
+
+  <!-- Share LinkedIn -->
+  <span>
+    <i class="fa fa-linkedin"></i> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/como-aparecer-o-nome-da-branch-no-terminal-ubuntu/" title="Share on Linkedin" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">linkedin</a>
+  </span>
+</div>
+
+
+<!-- Javascript for Facebook Comment-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=1167903699984343";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="fb-comments" data-href="http://iagovelasco.com.br/como-aparecer-o-nome-da-branch-no-terminal-ubuntu/" data-numposts="5"></div>
+
+  
+
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/page-loader.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/assets/js/waypoints.min.js"></script>
+<script type="text/javascript" src="/assets/js/owl.carousel.min.js"></script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQQ_Pt1-ePzVj_KY-ucm7xbukiHWu5aMU" type="text/javascript"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+<script type="text/javascript" src="/assets/js/GoogleMap-light.js"></script>
+
+</body>
+
+</html>
+

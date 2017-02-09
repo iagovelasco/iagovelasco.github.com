@@ -6,9 +6,45 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 07 Feb 2017 21:18:18 -0200</pubDate>
-    <lastBuildDate>Tue, 07 Feb 2017 21:18:18 -0200</lastBuildDate>
+    <pubDate>Wed, 08 Feb 2017 22:46:35 -0200</pubDate>
+    <lastBuildDate>Wed, 08 Feb 2017 22:46:35 -0200</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Mostrar branch no terminal Ubuntu</title>
+        <description>&lt;p&gt;Github é uma das ferramentas mais importantes para os desenvolvedores hoje em dia. Uma de suas grandes caracteristicas é a branch e o merge. Sempre quando eu estou trabalhando com o git eu tenho que dar o comando git status para ver qual branch eu estou atuando, consequentemente saber qual branch estamos trabalhando é meio confuso, não só para mim, mas para diversos desenvolvedores.&lt;/p&gt;
+
+&lt;p&gt;O sistema operacional que utilizo é &lt;b&gt;Linux&lt;/b&gt;, então está dica serve para quem o utiliza.&lt;/p&gt;
+
+&lt;p&gt;Portanto quem trabalha com o controlador de versão &lt;b&gt;Linux&lt;/b&gt; provavelmente utiliza o nosso querido &lt;b&gt;&lt;i&gt;Terminal&lt;/i&gt;&lt;/b&gt;.&lt;/p&gt;
+
+&lt;p&gt;E a solução para isso é fazer com que o nosso terminal exiba o nome da branch atual que estamos atuando:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/post-nomeBranch/terminal-branch.png&quot; /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;instalação&quot;&gt;Instalação&lt;/h4&gt;
+
+&lt;p&gt;Primeiramente abra o seu terminal e crie um diretório .bash e clona o o projeto a seguir:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;mkdir ~/.bash 
+ &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ~/.bash &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone https://github.com/jimeh/git-aware-prompt.git &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Edite o seu ~/.bashrc e adicione o seguinte código:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GITAWAREPROMPT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;~/.bash/git-aware-prompt
+&lt;span class=&quot;nb&quot;&gt;source&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GITAWAREPROMPT&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;/main.sh&quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;PS1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;{debian_chroot:+(&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;debian_chroot)}&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\u&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\h&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\w&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$txtcyn&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;git_branch&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$txtred&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;git_dirty&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$txtrst&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\]\$&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Agora de o comando &lt;b&gt;cd&lt;/b&gt; para um diretório &lt;b&gt;git&lt;/b&gt; e irá aparecer o nome da branch.&lt;/p&gt;
+
+&lt;p&gt;Com isso nossa vida se torna melhor sabendo qual branch que estamos atuando.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 07 Feb 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/como-aparecer-o-nome-da-branch-no-terminal-ubuntu/</link>
+        <guid isPermaLink="true">http://localhost:4000/como-aparecer-o-nome-da-branch-no-terminal-ubuntu/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Contribuindo no GitHub</title>
