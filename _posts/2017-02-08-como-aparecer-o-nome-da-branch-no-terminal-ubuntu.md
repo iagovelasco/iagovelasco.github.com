@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mostrar branch no terminal Ubuntu"
-description: Como mostrar o nome da branch no terminal linux
+description: Nome da branch no terminal linux
 image: '/assets/images/blog/terminal.png'
 ---
 Github é uma das ferramentas mais importantes para os desenvolvedores hoje em dia. Uma de suas grandes caracteristicas é a branch e o merge. Sempre quando eu estou trabalhando com o git eu tenho que dar o comando git status para ver qual branch eu estou atuando, consequentemente saber qual branch estamos trabalhando é meio confuso, não só para mim, mas para diversos desenvolvedores.
