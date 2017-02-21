@@ -4,11 +4,133 @@
     <title>Iago Velasco | Full stack</title>
     <description>Programador apaixonado por linhas de código e que respira tecnologia Tenho 23 anos, brasileiro, graduado em Ciências da Computação, sou desenvolvedor Front-End e Back-End
 </description>
-    <link>http://iagovelasco.com.br//</link>
-    <atom:link href="http://iagovelasco.com.br//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 11 Feb 2017 00:50:08 -0200</pubDate>
-    <lastBuildDate>Sat, 11 Feb 2017 00:50:08 -0200</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 20 Feb 2017 22:41:32 -0300</pubDate>
+    <lastBuildDate>Mon, 20 Feb 2017 22:41:32 -0300</lastBuildDate>
     <generator>Jekyll v3.3.1</generator>
+    
+      <item>
+        <title>Servico de Email - JavaScript</title>
+        <description>&lt;h2 id=&quot;envio-de-email-com-javascript&quot;&gt;Envio de email com JavaScript&lt;/h2&gt;
+
+&lt;p&gt;Imagine que você acabou de criar um site usando páginas estáticas, seja com a ajuda de Jekyll ou simplesmente usando alguns arquivos HTML, mas agora você deseja adicionar um formulário de contato. Você pode vincular a um serviço on-line, instalar algo pré-construído em seu servidor, ou construir algo a partir do zero usando o PHP, mas isso significa que você está completamente restrito no projeto ou está colocando mais esforço em um único formulário do que você fez para todo o site.&lt;/p&gt;
+
+&lt;p&gt;Com a ajuda na web hoje em dia, descobri que existe um serviço que podemos usar de uma forma gratuita, sendo 1000  envios de email a cada mês, com um simples javascript. Outro ponto positivo, é que geralmente os meus sites são desenvolvidos com jekyll e derivados e consigo hospedar com  próprio github pages, sem pagar nada de servidor, ou seja, o envio de email e hospedagem é de graça.&lt;/p&gt;
+
+&lt;h3 id=&quot;utilizando-formspree&quot;&gt;Utilizando formspree&lt;/h3&gt;
+
+&lt;p&gt;Primeiramente, para exemplo, de um clone do projeto abaixo&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git clone https://github.com/iagovelasco/formspree&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Em seguinda, faça o download do Jekyll.&lt;/p&gt;
+
+&lt;p&gt;Se já tiver instalado pode ignorar esta parte.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install jekyll bundler&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Navegue até o projeto clonado, no meu caso é:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;Projetos/formspree&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;e execute o comando:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jekyll server&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Abra o navegador e acesse localhost:4000,que deve estar igual a imagem abaixo:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/formspree/formulario.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Para configurarmos o recebimento de email, abra o projeto no seu editor de texto preferido, e logo em seguida abra o arquivo mail.js.&lt;/p&gt;
+
+&lt;p&gt;No lugar da url coloque o seu email.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;document&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.ready&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(){&lt;/span&gt;
+  
+	&lt;span class=&quot;s2&quot;&gt;&quot;use strict&quot;&lt;/span&gt;;
+	 
+
+	 &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#contact-form-holder'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.submit&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;onSubmitForm&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+	 &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#alert'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.removeClass&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'alert-danger'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+	
+
+
+    &lt;span class=&quot;k&quot;&gt;function &lt;/span&gt;onSubmitForm&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;event&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    event.preventDefault&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;;
+    var form &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; this;
+    var btnEnviar &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.btn-primary'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+
+    btnEnviar.button&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'loading'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+    &lt;span class=&quot;nv&quot;&gt;$.&lt;/span&gt;ajax&lt;span class=&quot;o&quot;&gt;({&lt;/span&gt;
+      url: &lt;span class=&quot;s1&quot;&gt;'//formspree.io/SEU EMAIL AQUI'&lt;/span&gt;,
+      method: &lt;span class=&quot;s1&quot;&gt;'POST'&lt;/span&gt;,
+      dataType: &lt;span class=&quot;s1&quot;&gt;'json'&lt;/span&gt;,
+      data: &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        nome: &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'input[name=&quot;name&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;,
+        Sobrenome: &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'input[name=&quot;surname&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;,
+        email: &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'input[name=&quot;email&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;,
+        mensagem: &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'textarea[name=&quot;message&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+      success: &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#alert'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+          .removeClass&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'alert-danger'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          .addClass&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'alert-success'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          .text&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Obrigado! Recebemos a sua mensagem!'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          .show&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;;
+
+           &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'input[name=&quot;name&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,
+           &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'input[name=&quot;email&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,
+           &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'textarea[name=&quot;surname&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,
+           &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'textarea[name=&quot;message&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+           btnEnviar.button&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'reset'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+      error: &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#alert'&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;
+          .removeClass&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'alert-success'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          .addClass&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'alert-danger'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          .text&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde!'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+          .show&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;;
+
+           &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'input[name=&quot;name&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,
+           &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'input[name=&quot;email&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,
+           &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'textarea[name=&quot;surname&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;,
+           &lt;span class=&quot;k&quot;&gt;$(&lt;/span&gt;form&lt;span class=&quot;k&quot;&gt;)&lt;/span&gt;.find&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'textarea[name=&quot;message&quot;]'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;.val&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+           btnEnviar.button&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'reset'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;;
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;,
+      &lt;span class=&quot;nb&quot;&gt;complete&lt;/span&gt;: &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+     
+    
+
+      &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;;
+  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+
+&lt;span class=&quot;o&quot;&gt;})&lt;/span&gt;;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Com o formspree já configurado, abrá o site que está rodando em localhost:4000, preencha o formulário, e no lugar do email, digite o mesmo email que colocou no arquivo mail.js.&lt;/p&gt;
+
+&lt;p&gt;Após isso clique em enviar.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/formspree/seuEmailAqui.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Você será direcionado para esta tela:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/formspree/confirmation.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Após confirmado em sua caixa de email pessoal, o envio de email formspree já estará funcionando.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/blog/formspree/msgRecebida.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Agora é só desenvolver o seu site, e configurá-lo para ir para produção com o serviço de envio de email.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 20 Feb 2017 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/servico-de-email-de-graca-javascript/</link>
+        <guid isPermaLink="true">http://localhost:4000/servico-de-email-de-graca-javascript/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Mostrar branch no terminal Ubuntu</title>
@@ -40,8 +162,8 @@
 &lt;p&gt;Com isso nossa vida se torna melhor sabendo qual branch que estamos atuando.&lt;/p&gt;
 </description>
         <pubDate>Wed, 08 Feb 2017 00:00:00 -0200</pubDate>
-        <link>http://iagovelasco.com.br//como-aparecer-o-nome-da-branch-no-terminal-ubuntu/</link>
-        <guid isPermaLink="true">http://iagovelasco.com.br//como-aparecer-o-nome-da-branch-no-terminal-ubuntu/</guid>
+        <link>http://localhost:4000/nome-da-branch-no-terminal-ubuntu/</link>
+        <guid isPermaLink="true">http://localhost:4000/nome-da-branch-no-terminal-ubuntu/</guid>
         
         
       </item>
@@ -143,8 +265,8 @@ git push&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
         <pubDate>Mon, 30 Jan 2017 00:00:00 -0200</pubDate>
-        <link>http://iagovelasco.com.br//contribuindo-no-github/</link>
-        <guid isPermaLink="true">http://iagovelasco.com.br//contribuindo-no-github/</guid>
+        <link>http://localhost:4000/contribuindo-no-github/</link>
+        <guid isPermaLink="true">http://localhost:4000/contribuindo-no-github/</guid>
         
         
       </item>
@@ -169,8 +291,8 @@ se algum assunto chamar atenção, relacionado a metas de vida, empreendedorismo
 
 </description>
         <pubDate>Tue, 24 Jan 2017 00:00:00 -0200</pubDate>
-        <link>http://iagovelasco.com.br//hello-world/</link>
-        <guid isPermaLink="true">http://iagovelasco.com.br//hello-world/</guid>
+        <link>http://localhost:4000/hello-world/</link>
+        <guid isPermaLink="true">http://localhost:4000/hello-world/</guid>
         
         
       </item>

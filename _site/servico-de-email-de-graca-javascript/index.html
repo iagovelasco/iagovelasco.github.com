@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+
+<!-- Title -->
+<title>Servico de Email - JavaScript</title>
+
+<!-- Meta -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="Q1g9bRnEr4trYRSSThKiGkiW1MhPNXXyVdmiENgYyEA" />
+<meta name="description" content="">
+<meta property="fb:app_id"       content="1167903699984343" />
+<meta name="author" content="Iago Velasco">
+
+<!-- Retina Images -->
+<script>if((window.devicePixelRatio===undefined?1:window.devicePixelRatio)>1)
+    document.cookie='HTTP_IS_RETINA=1;path=/';</script>
+<!-- End Retina Images -->
+
+<!--Google Analytics-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-82206807-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<!-- Google Web Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,600,700,500' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets -->
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/animations.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/flaticon.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/owl.theme.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/style.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/colors/orange.css" id="colors" />
+
+</head>
+
+<body>
+	<!-- Page Title -->
+	
+	<div class="page-title bottom-padded black">	
+        <!-- Page Title Background -->
+    	<div class="page-title-bg editable-alpha" data-alpha="20"><img src="/assets/images/blog/formspree.png" alt="" /></div>
+        <div class="content padded dark">
+          <!-- Top Bar -->
+          <div class="top-bar">
+            <!-- Go Back -->
+            <div class="pull-left">
+                <a href="/" class="btn btn-default btn-pull-up"><i class="icon-before fa fa-chevron-left"></i>Site</a>
+            </div>
+            <!-- Heading -->
+         		<div class="post-carousel-control-blog">
+             
+                	  <a class="post-carousel-prev" href="/nome-da-branch-no-terminal-ubuntu/">Previous</a>
+              
+               
+                </div>
+          </div>
+          
+          <!-- Page Title Content -->
+          <div class="padded-vertical">
+          	<span class="post-date-alt">20/02/2017</span>
+            <h1 class="medium">Servico de Email - JavaScript</h1>
+            <div class="post-meta pull-left">
+           
+                <span><i class="fa fa-tag"></i><a href="#">Receba email de freela, clientes de graça utilizando JavaScript</a></span>
+            </div>
+          </div>
+        </div> 
+    </div>
+     
+    <!-- Page Content -->
+    <div class="container content">
+    
+      <div class="row">
+      
+      	<div class="col-lg-12">
+        	<p class="lead"> </p>
+    		<h2 id="envio-de-email-com-javascript">Envio de email com JavaScript</h2>
+
+<p>Imagine que você acabou de criar um site usando páginas estáticas, seja com a ajuda de Jekyll ou simplesmente usando alguns arquivos HTML, mas agora você deseja adicionar um formulário de contato. Você pode vincular a um serviço on-line, instalar algo pré-construído em seu servidor, ou construir algo a partir do zero usando o PHP, mas isso significa que você está completamente restrito no projeto ou está colocando mais esforço em um único formulário do que você fez para todo o site.</p>
+
+<p>Com a ajuda na web hoje em dia, descobri que existe um serviço que podemos usar de uma forma gratuita, sendo 1000  envios de email a cada mês, com um simples javascript. Outro ponto positivo, é que geralmente os meus sites são desenvolvidos com jekyll e derivados e consigo hospedar com  próprio github pages, sem pagar nada de servidor, ou seja, o envio de email e hospedagem é de graça.</p>
+
+<h3 id="utilizando-formspree">Utilizando formspree</h3>
+
+<p>Primeiramente, para exemplo, de um clone do projeto abaixo</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">git clone https://github.com/iagovelasco/formspree</code></pre></figure>
+
+<p>Em seguinda, faça o download do Jekyll.</p>
+
+<p>Se já tiver instalado pode ignorar esta parte.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gem install jekyll bundler</code></pre></figure>
+
+<p>Navegue até o projeto clonado, no meu caso é:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">cd </span>Projetos/formspree</code></pre></figure>
+
+<p>e execute o comando:</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">jekyll server</code></pre></figure>
+
+<p>Abra o navegador e acesse localhost:4000,que deve estar igual a imagem abaixo:</p>
+
+<p><img src="/assets/images/blog/formspree/formulario.png" /></p>
+
+<p>Para configurarmos o recebimento de email, abra o projeto no seu editor de texto preferido, e logo em seguida abra o arquivo mail.js.</p>
+
+<p>No lugar da url coloque o seu email.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="k">$(</span>document<span class="k">)</span>.ready<span class="o">(</span><span class="k">function</span> <span class="o">(){</span>
+  
+	<span class="s2">"use strict"</span>;
+	 
+
+	 <span class="k">$(</span><span class="s1">'#contact-form-holder'</span><span class="k">)</span>.submit<span class="o">(</span>onSubmitForm<span class="o">)</span>;
+	 <span class="k">$(</span><span class="s1">'#alert'</span><span class="k">)</span>.removeClass<span class="o">(</span><span class="s1">'alert-danger'</span><span class="o">)</span>
+	
+
+
+    <span class="k">function </span>onSubmitForm<span class="o">(</span>event<span class="o">)</span> <span class="o">{</span>
+    event.preventDefault<span class="o">()</span>;
+    var form <span class="o">=</span> this;
+    var btnEnviar <span class="o">=</span> <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'.btn-primary'</span><span class="o">)</span>;
+
+    btnEnviar.button<span class="o">(</span><span class="s1">'loading'</span><span class="o">)</span>;
+    <span class="nv">$.</span>ajax<span class="o">({</span>
+      url: <span class="s1">'//formspree.io/SEU EMAIL AQUI'</span>,
+      method: <span class="s1">'POST'</span>,
+      dataType: <span class="s1">'json'</span>,
+      data: <span class="o">{</span>
+        nome: <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'input[name="name"]'</span><span class="o">)</span>.val<span class="o">()</span>,
+        Sobrenome: <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'input[name="surname"]'</span><span class="o">)</span>.val<span class="o">()</span>,
+        email: <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'input[name="email"]'</span><span class="o">)</span>.val<span class="o">()</span>,
+        mensagem: <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'textarea[name="message"]'</span><span class="o">)</span>.val<span class="o">()</span>
+      <span class="o">}</span>,
+      success: <span class="k">function</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">$(</span><span class="s1">'#alert'</span><span class="k">)</span>
+          .removeClass<span class="o">(</span><span class="s1">'alert-danger'</span><span class="o">)</span>
+          .addClass<span class="o">(</span><span class="s1">'alert-success'</span><span class="o">)</span>
+          .text<span class="o">(</span><span class="s1">'Obrigado! Recebemos a sua mensagem!'</span><span class="o">)</span>
+          .show<span class="o">()</span>;
+
+           <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'input[name="name"]'</span><span class="o">)</span>.val<span class="o">(</span><span class="s2">""</span><span class="o">)</span>,
+           <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'input[name="email"]'</span><span class="o">)</span>.val<span class="o">(</span><span class="s2">""</span><span class="o">)</span>,
+           <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'textarea[name="surname"]'</span><span class="o">)</span>.val<span class="o">(</span><span class="s2">""</span><span class="o">)</span>,
+           <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'textarea[name="message"]'</span><span class="o">)</span>.val<span class="o">(</span><span class="s2">""</span><span class="o">)</span>
+           btnEnviar.button<span class="o">(</span><span class="s1">'reset'</span><span class="o">)</span>;
+      <span class="o">}</span>,
+      error: <span class="k">function</span><span class="o">()</span> <span class="o">{</span>
+        <span class="k">$(</span><span class="s1">'#alert'</span><span class="k">)</span>
+          .removeClass<span class="o">(</span><span class="s1">'alert-success'</span><span class="o">)</span>
+          .addClass<span class="o">(</span><span class="s1">'alert-danger'</span><span class="o">)</span>
+          .text<span class="o">(</span><span class="s1">'Ocorreu um erro ao enviar sua mensagem. Tente novamente mais tarde!'</span><span class="o">)</span>
+          .show<span class="o">()</span>;
+
+           <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'input[name="name"]'</span><span class="o">)</span>.val<span class="o">(</span><span class="s2">""</span><span class="o">)</span>,
+           <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'input[name="email"]'</span><span class="o">)</span>.val<span class="o">(</span><span class="s2">""</span><span class="o">)</span>,
+           <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'textarea[name="surname"]'</span><span class="o">)</span>.val<span class="o">(</span><span class="s2">""</span><span class="o">)</span>,
+           <span class="k">$(</span>form<span class="k">)</span>.find<span class="o">(</span><span class="s1">'textarea[name="message"]'</span><span class="o">)</span>.val<span class="o">(</span><span class="s2">""</span><span class="o">)</span>
+           btnEnviar.button<span class="o">(</span><span class="s1">'reset'</span><span class="o">)</span>;
+      <span class="o">}</span>,
+      <span class="nb">complete</span>: <span class="k">function</span><span class="o">()</span> <span class="o">{</span>
+     
+    
+
+      <span class="o">}</span>
+    <span class="o">})</span>;
+  <span class="o">}</span>
+
+
+<span class="o">})</span>;</code></pre></figure>
+
+<p>Com o formspree já configurado, abrá o site que está rodando em localhost:4000, preencha o formulário, e no lugar do email, digite o mesmo email que colocou no arquivo mail.js.</p>
+
+<p>Após isso clique em enviar.</p>
+
+<p><img src="/assets/images/blog/formspree/seuEmailAqui.png" /></p>
+
+<p>Você será direcionado para esta tela:</p>
+
+<p><img src="/assets/images/blog/formspree/confirmation.png" /></p>
+
+<p>Após confirmado em sua caixa de email pessoal, o envio de email formspree já estará funcionando.</p>
+
+<p><img src="/assets/images/blog/formspree/msgRecebida.png" /></p>
+
+<p>Agora é só desenvolver o seu site, e configurá-lo para ir para produção com o serviço de envio de email.</p>
+
+	
+
+<!--Share-->
+ 
+<hr>
+<p>Compartilhe:</p>
+<ul class="social-icons">
+  
+  <!-- Share Twitter -->
+  <span>
+    <i class="fa fa-twitter"></i> <a href="https://twitter.com/intent/tweet?url=http://localhost:4000/servico-de-email-de-graca-javascript/&amp;text=Servico%20de%20Email%20-%20JavaScript&amp; title="Share on Twitter" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">twitter</a>
+  </span>
+
+  <!-- Share Facebook -->
+ <span>
+    <i class="fa fa-facebook"></i> <a href="https://www.facebook.com/sharer.php?&amp;u=http://localhost:4000/servico-de-email-de-graca-javascript/" title="Share on Facebook" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">facebook</a>
+  </span>
+
+  <!-- Share LinkedIn -->
+  <span>
+    <i class="fa fa-linkedin"></i> <a href="http://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/servico-de-email-de-graca-javascript/" title="Share on Linkedin" onclick="window.open(this.href, 'mywin', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">linkedin</a>
+  </span>
+</div>
+
+
+<!-- Javascript for Facebook Comment-->
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.8&appId=1167903699984343";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<div class="fb-comments" data-href="http://iagovelasco.com.br/servico-de-email-de-graca-javascript/" data-numposts="5"></div>
+
+  
+
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="/assets/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+<script type="text/javascript" src="/assets/js/page-loader.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.localscroll-1.2.7-min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.appear.js"></script>
+<script type="text/javascript" src="/assets/js/waypoints.min.js"></script>
+<script type="text/javascript" src="/assets/js/owl.carousel.min.js"></script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQQ_Pt1-ePzVj_KY-ucm7xbukiHWu5aMU" type="text/javascript"></script>
+
+<!-- Custom Script -->
+<script type="text/javascript" src="/assets/js/custom.js"></script>
+<script type="text/javascript" src="/assets/js/GoogleMap-light.js"></script>
+
+</body>
+
+</html>
+
