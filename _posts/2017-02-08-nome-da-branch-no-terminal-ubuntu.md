@@ -21,7 +21,8 @@ Primeiramente abra o seu terminal e crie um diretório .bash e clona o o projeto
 
 {% highlight bash %}
  $ mkdir ~/.bash 
- $ cd ~/.bash $ git clone https://github.com/jimeh/git-aware-prompt.git 
+ $ cd ~/.bash 
+ $ git clone https://github.com/jimeh/git-aware-prompt.git 
 {% endhighlight %}
 
 Edite o seu ~/.bashrc e adicione o seguinte código:
