@@ -333,7 +333,7 @@ $(document).ready(function (){
     var form = this;
     var btnEnviar = $(form).find('.btn-default');
 
-    btnEnviar.button('loading');
+    btnEnviar.button('Enviando');
     $.ajax({
       url: '//formspree.io/iagovelasco@gmail.com',
       method: 'POST',
@@ -352,7 +352,9 @@ $(document).ready(function (){
 
            $(form).find('input[name="name"]').val(""),
            $(form).find('input[name="email"]').val(""),
-           $(form).find('textarea[name="message"]').val("")
+		   $(form).find('textarea[name="message"]').val("")
+		   
+		   
       },
       error: function() {
         $('#alert')
@@ -363,10 +365,11 @@ $(document).ready(function (){
 
            $(form).find('input[name="name"]').val(""),
            $(form).find('input[name="email"]').val(""),
-           $(form).find('textarea[name="message"]').val("")
+		   $(form).find('textarea[name="message"]').val("")
+		  
       },
-      complete: function() {
-        form.reset();
+      complete: function() {		
+		
       }
     });
   }
